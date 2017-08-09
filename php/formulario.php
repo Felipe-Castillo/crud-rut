@@ -12,6 +12,7 @@ if (count($resultados)>0)
 {
 foreach ($resultados as $key => $value)
 {
+  $userA[$i]["id"]=$value["id"];
   $userA[$i]["pais"]=$value["pais"];
   $userA[$i]["nombre"]=$value["nombre"];
   $userA[$i]["apellido"]=$value["apellido"];
@@ -31,7 +32,7 @@ foreach ($resultados as $key => $value)
 
   <div class="form-group">
     <label for="rut">Rut</label>
-    <input type="text" class="form-control" onfocusout="Valida_Rut(this)" value="<?php echo $userA[0]["rut"]; ?>" data-val="true" name="rut" >
+    <input type="text" class="form-control" onfocusout="Valida_Rut(this)" value="<?php echo $userA[0]["rut"]; ?>" data-val="true" name="rut" required >
   </div>
     <label for="name">Nombre</label>
     <input type="text" class="form-control" value="<?php echo $userA[0]["nombre"]; ?>" name="nombre" id="nombre" required>
@@ -47,9 +48,9 @@ foreach ($resultados as $key => $value)
   
   <div class="form-group">
     <label for="telefono">Telefono</label>
-    <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" value="<?php echo $userA[0]["telefono"]; ?>" name="telefono" >
+    <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" value="<?php echo $userA[0]["telefono"]; ?>" name="telefono" required >
   </div>
-<input type="hidden" name="id" value="<?php echo $userA[0]->id; ?>">
+<input type="hidden" name="id" value="<?php echo $userA[0]["id"]; ?>">
   <button type="submit" class="btn btn-default">Actualizar</button>
 </form>
 <?php else:?>

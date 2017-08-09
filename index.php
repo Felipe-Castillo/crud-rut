@@ -40,11 +40,11 @@
   
   <div class="form-group">
     <label for="pais">Pais</label>
-    <input type="text" class="form-control" onkeydown="return alphaOnly(event);" id="pais" name="pais" >
+    <input type="text" class="form-control" onkeydown="return alphaOnly(event);" id="pais" name="pais" required >
   </div>
   <div class="form-group">
     <label for="telefono">Telefono</label>
-    <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'  class="form-control" name="telefono" >
+    <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'  class="form-control" name="telefono" required >
   </div>
 
   <button type="submit" class="btn btn-default" id="agregar">Agregar</button>

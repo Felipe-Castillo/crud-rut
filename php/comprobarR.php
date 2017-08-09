@@ -1,5 +1,5 @@
 <?php
-include "conexion2.php";
+include "conexion.php";
 if (!empty($_GET)) 
 {
 $sql="SELECT * from usuarios where rut=:rut";

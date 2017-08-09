@@ -8,7 +8,7 @@ function Valida_Rut( Objeto )
 		largo = crut.length;
 		if ( largo <2 )
 		{
-			alert('rut inválido')
+      alert('El Rut Ingreso es Invalido')
 			Objeto.value="";
 			Objeto.setAttribute("data-val","false")
 			return false;
@@ -93,9 +93,55 @@ function Valida_Rut( Objeto )
 }
 
 
-function alphaOnly(event) {
-  var key = event.keyCode;
-  return ((key >= 65 && key <= 90) || key == 8);
-};
+$("#nombre").keyup(function(e) {
+  // Our regex
+  // a-z => allow all lowercase alphabets
+  // A-Z => allow all uppercase alphabets
+  // 0-9 => allow all numbers
+  // @ => allow @ symbol
+  var regex = /^[a-zA-Z0@ ]+$/;
+  // This is will test the value against the regex
+  // Will return True if regex satisfied
+  if (regex.test(this.value) !== true)
+  //alert if not true
+  //alert("Invalid Input");
+
+  // You can replace the invalid characters by:
+    this.value = this.value.replace(/[^a-zA-Z@ ]+/, '');
+});
+
+$("#apellido").keyup(function(e) {
+  // Our regex
+  // a-z => allow all lowercase alphabets
+  // A-Z => allow all uppercase alphabets
+  // 0-9 => allow all numbers
+  // @ => allow @ symbol
+  var regex = /^[a-zA-Z0@ ]+$/;
+  // This is will test the value against the regex
+  // Will return True if regex satisfied
+  if (regex.test(this.value) !== true)
+  //alert if not true
+  //alert("Invalid Input");
+
+  // You can replace the invalid characters by:
+    this.value = this.value.replace(/[^a-zA-Z@ ]+/, '');
+});
+
+$("#pais").keyup(function(e) {
+  // Our regex
+  // a-z => allow all lowercase alphabets
+  // A-Z => allow all uppercase alphabets
+  // 0-9 => allow all numbers
+  // @ => allow @ symbol
+  var regex = /^[a-zA-Z0@ ]+$/;
+  // This is will test the value against the regex
+  // Will return True if regex satisfied
+  if (regex.test(this.value) !== true)
+  //alert if not true
+  //alert("Invalid Input");
+
+  // You can replace the invalid characters by:
+    this.value = this.value.replace(/[^a-zA-Z@ ]+/, '');
+});
 
 
